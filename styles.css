@@ -39,6 +39,7 @@ body {
 
 .links {
     display: flex;
+    gap: 10px;
     padding: 10px;
 }
 
@@ -56,4 +57,12 @@ body {
 .proj1, .proj2, .proj3, .proj4 {
     padding: 8px;
     border-radius: 6px;
+}
+
+/* Make project links display as inline-block to contain the underline */
+.projects a {
+    display: inline-block;
+    text-decoration: none;  /* Remove default underline */
+    border-bottom: 1px solid;  /* Add custom underline that matches text width */
+    line-height: 1.2;  /* Adjust space between text and underline */
 }
