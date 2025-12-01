@@ -1,19 +1,25 @@
 body {
+    margin: 0; 
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFFFC5;
 }
 
 .navbar {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 28px;
     background-color: #2F3E46;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px; /* padding for content, not the navbar background */
+    max-width: 1200px; /* optional to center content on large screens */
+    margin: 0 auto;
 }
 
 .site-title {
