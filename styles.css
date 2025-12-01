@@ -108,3 +108,38 @@ body {
     border-bottom: 1px solid;  /* Add custom underline that matches text width */
     line-height: 1.2;  /* Adjust space between text and underline */
 }
+
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post a {
+    text-decoration: none;
+    color: #2F3E46;
+    font-weight: 600;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+.blog-date {
+    color: #666;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.blog-snippet {
+    color: #333;
+}
