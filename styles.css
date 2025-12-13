@@ -17,8 +17,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 28px; /* padding for content, not the navbar background */
-    max-width: 1200px; /* optional to center content on large screens */
+    padding: 16px 15px; /* padding for content, not the navbar background */
+    max-width: 2000px; /* optional to center content on large screens */
     margin: 0 auto;
 }
 
