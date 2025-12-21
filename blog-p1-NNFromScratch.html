@@ -85,21 +85,20 @@
         </p>
 
         <p>
-            The neurons of a neural network perform two operations. First, the weighted 
+            The neurons of a neural network perform two computions. First, the weighted 
             sum is computed. This is a linear combination that involves multiplying each input by 
             its associated weight and then summing them all up. This operation combines all of 
-            the inputs into a single scalar value. The second operation, involves passing the weighted 
-            sum through the neuron's activation function to get the neuron's output. The weights 
-            represent how strongly each input matters. The weighted sum is calculated as follows: 
-            $$z = \sum_{i = 1}^{n}{w_ix_i} + b_j$$, 
-            where $z_j$ is the weighted sum of the $j_{th}$, where $w_i$ is the weight from the $i_{th}$ 
-            edge to the neuron, $x_i$ is the $i_{th}$ output from the previous layer to the neuron, 
-            and $b_j$ is the bias of the $j_{th}$ neuron in the current layer. 
+            the inputs into a single scalar value. The weights represent how strongly each input 
+            matters. The weighted sum is calculated as follows: 
+            $$z_j = \sum_{i = 1}^{n}{w_ix_i} + b_j$$, 
+            where $z_j$ is the weighted sum of the $j_{th}$ neuron in the layer, where $w_i$ is the 
+            weight from the $i_{th}$ edge to the neuron, $x_i$ is the $i_{th}$ output from the previous 
+            layer to the neuron, and $b_j$ is the bias of the $j_{th}$ neuron in the current layer. 
         </p>
 
         <p>
-            As mentioned above, once we have the weighted sum, we pass it as input into an activation 
-            function. The activation function determines the output of a neuron, and helps to introduce 
+            The second compution, involves passing the weighted sum through the neuron's 
+            activation function to get the neuron's output. The activation function helps to introduce 
             non-linearity into the network so that it can learn more complex patterns and approximate 
             any continuous function (as described by the Universal Approximation Theorem). There are many different kinds 
             of activation functions and selecting one often depends on the task. Neural networks are 
@@ -108,22 +107,24 @@
             common activation functions 
             include the $sigmoid(z) = \frac{1}{(1 + e^z)}$, 
             $tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$,
-            and $relu(z) = max(0, z)$. 
+            and $relu(z) = max(0, z)$, where z is the weighted input of a neuron. 
             For classification some common activation functions include sigmoid for binary classification
             and 
             $softmax(\vec{z}) = \frac{e^{z_{i}}}{\sum_{j=1}^k{e^{z_j}}}$, 
-            where $\vec{z}$ is the vector of outputs from the previous layer, for multi-class and 
+            $\hat{z} = (z_1,z_2,...,z_k)$ is the vector of outputs (logits) from the previous layer, and
+            $k$ is the number of classes (or neurons in the softmax layer), for multi-class and 
             binary classification.
         </p>
 
         <p>
-            In summary, each neuron in a layer computes the weighted sum and passes the 
+            In summary, each neuron in a layer computes the weighted sum and passes 
             it to the activation function associated with the neuron. Every activation (output) is 
-            then used as input to each neuron in the next layer of the neural network. This process is 
-            why regular neural networks are called feedforward networks, since information flows from 
-            the input layer through any hidden layers to the output layer. At the output layer, the 
-            neural network outputs either a number for regression or a class-related output for 
-            classification. 
+            then used as input to each neuron in the next layer of the neural network, and so on 
+            through the entire neural network until we get a final output at the output layer. This 
+            process is why regular neural networks are called feedforward networks, since information 
+            flows from the input layer through any hidden layers (the layers in the middle of the network) 
+            to the output layer. At the output layer, the neural network outputs either a number for 
+            regression or a class-related output for classification. 
         </p>
 
         <p>
